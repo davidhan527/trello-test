@@ -18,9 +18,6 @@ development:
   adapter: postgresql
   encoding: unicode
   database: trello_test_app_development
-  pool: 5
-  username: trello_test_app
-  password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -47,14 +44,3 @@ test:
   adapter: postgresql
   encoding: unicode
   database: trello_test_app_test
-  pool: 5
-  username: trello_test_app
-  password:
-
-production:
-  adapter: postgresql
-  encoding: unicode
-  database: trello_test_app_production
-  pool: 5
-  username: trello_test_app
-  password:

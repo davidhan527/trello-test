@@ -1,0 +1,8 @@
+<h1>Welcome! </h1>
+
+<% flash.each do |name, msg| %>
+  <%= content_tag :div, msg, class: name %>
+<% end %>
+
+
+<%= link_to "sign up", new_user_path %>
