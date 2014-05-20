@@ -8,7 +8,14 @@
 </head>
 <body>
 
-<%= yield %>
+  <% if logged_in? %>
+    <%= link_to "log out", "/session", method: :delete %>
+  <% else %>
+    <%= link_to "log in", "/login" %>
+  <% end %>
 
+<%= yield %>
+  
+  <%= javascript_include_tag "scripts" %>
 </body>
 </html>

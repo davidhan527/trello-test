@@ -7,6 +7,14 @@ TrelloTestApp::Application.routes.draw do
 
   resources :users, only: [:new, :create]
 
+  resources :tasks
+
+  get "/login" => "session#new"
+
+  post '/session' => "session#create"
+  delete '/session' => "session#destroy"
+
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
