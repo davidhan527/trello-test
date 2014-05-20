@@ -9,13 +9,20 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'bcrypt'
 
 group :development do
-  gem 'pry-rails'
   gem 'annotate'
 end
 
 group :development, :test do 
+  gem 'pry-rails'
   gem 'rspec-rails'
+  gem 'factory_girl_rails'
 
+end
+
+group :test do
+  gem 'capybara'
+  gem 'launchy'
+  gem 'shoulda-matchers'
 end
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
