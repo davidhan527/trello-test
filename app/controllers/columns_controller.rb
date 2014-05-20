@@ -7,12 +7,11 @@ class ColumnsController < ApplicationController
   end
 
   def new
-
+    
   end
 
   def create
-    binding.pry
-    @column = current_user.build_column(column_params);
+    @column = current_user.columns.build(column_params);
 
     respond_to do |format|
       if @column.save

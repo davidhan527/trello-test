@@ -1,0 +1,9 @@
+div.column-task {
+  background-color: yellow;
+}
+
+.column-task {
+  width: 220px;
+  min-height: 500px;
+  display: inline-block;
+}

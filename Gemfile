@@ -12,10 +12,14 @@ group :development do
   gem 'pry-rails'
   gem 'annotate'
 end
+
+group :development, :test do 
+  gem 'rspec-rails'
+
+end
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'

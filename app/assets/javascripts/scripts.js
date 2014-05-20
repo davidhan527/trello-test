@@ -36,7 +36,10 @@ var TasksView = Backbone.View.extend({
 
   addTask: function(task) {
     var taskView = new TaskView({model: task});
-    $(".tasks").append(taskView.render().el);
+    var taskRender = taskView.render().$el;
+
+    taskRender.draggable({snap: ".column-task", snapMode: "inner"});
+    $(".tasks").append(taskRender);
   },
 
   createTask: function() {
@@ -62,6 +65,7 @@ var Columns = Backbone.Collection.extend({
 });
 
 var ColumnView = Backbone.View.extend({
+  className: 'column-task',
   template: _.template($("#column-template").html()),
 
   render: function() {
