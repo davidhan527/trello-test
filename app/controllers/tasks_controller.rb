@@ -3,8 +3,7 @@ class TasksController < ApplicationController
 
   def index
     @tasks = Task.all
-    @task = Task.new
-    respond_with(@task, @tasks)
+    respond_with @tasks
   end
 
   def new

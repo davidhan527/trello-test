@@ -1,4 +1,4 @@
 class Task < ActiveRecord::Base
-  belongs_to :boards
+  belongs_to :columns
 
 end

@@ -3,14 +3,27 @@
 
 </script>
 
+<script type="text/template" id="column-template">
+  <div class="column-task">
+    <p><%%= name %> </p>  
+  <div>
+</script>
+
 <div id="task-form">
-  <label>Name:
+  <label> Task Name:
     <input type="text" class="task-input">
   </label>
 
   <button class="add-task">Add Task</button>
 </div>
 
+<div id="column-form">
+  <label>Column Name:
+    <input type="text" class="column-input">
+  </label>
+
+  <button class="add-column">Add Task</button>
+</div>
 
 <div class="tasks">
   

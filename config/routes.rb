@@ -8,6 +8,7 @@ TrelloTestApp::Application.routes.draw do
   resources :users, only: [:new, :create]
 
   resources :tasks
+  resources :columns
 
   get "/login" => "session#new"
 

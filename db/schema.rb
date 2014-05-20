@@ -16,12 +16,12 @@ ActiveRecord::Schema.define(version: 20140519234848) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "boards", force: true do |t|
+  create_table "columns", force: true do |t|
     t.string  "name"
     t.integer "user_id"
   end
 
-  add_index "boards", ["user_id"], name: "index_boards_on_user_id", using: :btree
+  add_index "columns", ["user_id"], name: "index_columns_on_user_id", using: :btree
 
   create_table "tasks", force: true do |t|
     t.string  "name"
