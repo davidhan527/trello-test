@@ -7,6 +7,8 @@
     <p><%%= name %> </p>  
 </script>
 
+<%= content_tag "div", "Loading..", id: "data-onload", data: { columns: current_user ? @columns : nil } %>
+
 <div id="task-form">
   <label> Task Name:
     <input type="text" class="task-input">
@@ -27,3 +29,4 @@
   
 
 </div>
+

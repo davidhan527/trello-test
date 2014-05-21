@@ -6,4 +6,11 @@ div.column-task {
   width: 220px;
   min-height: 500px;
   display: inline-block;
+  margin: 8px;
+}
+
+.task {
+  width: 100px; 
+  height: 100px;
+  background: green;
 }

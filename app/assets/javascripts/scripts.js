@@ -10,6 +10,7 @@ var Tasks = Backbone.Collection.extend({
 });
 
 var TaskView = Backbone.View.extend({
+  className: 'task',
   template: _.template($("#task-template").html()),
 
   render: function() {
@@ -36,10 +37,10 @@ var TasksView = Backbone.View.extend({
 
   addTask: function(task) {
     var taskView = new TaskView({model: task});
-    var taskRender = taskView.render().$el;
+    var taskEl = taskView.render().$el;
 
-    taskRender.draggable({snap: ".column-task", snapMode: "inner"});
-    $(".tasks").append(taskRender);
+    taskEl.draggable({snap: ".column-task", snapMode: "inner"});
+    $(".tasks").append(taskEl);
   },
 
   createTask: function() {
@@ -87,11 +88,21 @@ var ColumnsView = Backbone.View.extend({
 
   render: function() {
     this.collection.each(this.addColumn, this);
+    return this;
   },
 
-  addColumn: function(board) {
-    var columnView = new ColumnView({model: board});
-    $(".tasks").append(columnView.render().el);
+  addColumn: function(column) {
+    var columnView = new ColumnView({model: column});
+    var columnEl = columnView.render().$el;
+    columnEl.droppable({
+      accept: ".task",
+      drop: function (event, ui) {
+        debugger;
+        console.log("event", event);
+        console.log("ui", ui);
+      }
+      });
+    $(".tasks").append(columnEl);
 
   },
 

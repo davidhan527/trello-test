@@ -1,13 +1,13 @@
 class ColumnsController < ApplicationController
   respond_to :html, :json
   def index
-    @columns = Column.all
+    @columns = current_user.columns.all
 
     respond_with @columns
   end
 
   def new
-    
+
   end
 
   def create

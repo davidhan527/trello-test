@@ -6,6 +6,7 @@ gem 'sass-rails', '~> 4.0.2'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 
+
 gem 'bcrypt'
 
 group :development do
@@ -20,12 +21,14 @@ group :development, :test do
 end
 
 group :test do
+  gem 'faker'
   gem 'capybara'
   gem 'launchy'
   gem 'shoulda-matchers'
 end
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
